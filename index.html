@@ -44,9 +44,17 @@
     <ul>
       <li>Wenn du „Standort verwenden“ antippst und die Android-Berechtigung erteilst, bestimmt die App aus deinem Standort direkt auf dem Gerät, in welcher Gemeinde, welchem Kreis, welcher Region und welchem Naturraum du bist und welche Sehenswürdigkeiten in der Nähe liegen.</li>
       <li>Im Android-Dialog entscheidest du, ob die App deinen genauen oder nur deinen ungefähren Standort erhält. Mit dem ungefähren Standort kann die Zuordnung an Gemeindegrenzen ungenau sein.</li>
-      <li>Die App fragt den Standort nur ab, solange du sie geöffnet hast, nicht im Hintergrund. Sie hält ihn nur im Arbeitsspeicher und sendet ihn nicht an den Entwickler.</li>
+      <li>Die App fragt den Standort nur ab, solange du sie geöffnet hast oder „Unterwegs“ läuft (siehe unten). Sie hält ihn nur im Arbeitsspeicher und sendet ihn nicht an den Entwickler.</li>
       <li>Ohne Standortberechtigung kannst du die App weiter nutzen und einen Ort von Hand wählen.</li>
       <li>Der Zugriff auf den Standort deines Geräts ist für die von dir gewünschte Ortsbestimmung unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Rechtsgrundlage der Verarbeitung: Art. 6 Abs. 1 lit. b DSGVO (Bereitstellung der von dir genutzten App-Funktion). Du kannst die Berechtigung jederzeit in den Android-Einstellungen entziehen.</li>
+    </ul>
+
+    <h3>Unterwegs</h3>
+    <ul>
+      <li>Im Bereich „Unterwegs“ sagt dir die App Sehenswürdigkeiten an, an denen du gerade vorbeikommst. Unterwegs startest du selbst mit „Unterwegs starten“.</li>
+      <li>Solange Unterwegs läuft, nutzt die App deinen genauen Standort laufend, etwa alle drei Sekunden, auch wenn der Bildschirm aus ist oder du eine andere App verwendest. Android zeigt dabei eine dauerhafte Benachrichtigung „Genilo Unterwegs“, über die du Unterwegs jederzeit beenden kannst. Erlaubst du (ab Android 13) keine Benachrichtigungen, läuft Unterwegs trotzdem, und Android führt es unter den aktiven Apps.</li>
+      <li>Auch dabei wertet die App den Standort nur auf deinem Gerät aus, Unterwegs zeigt keine Karte und baut selbst keine Internetverbindung auf. Standort, Ansagen und die Liste der angesagten Sehenswürdigkeiten hält die App nur im Arbeitsspeicher; sie speichert davon nichts dauerhaft und sendet nichts an den Entwickler. Liest statt „Thorsten“ die Sprachausgabe deines Geräts vor (siehe „Vorlesen“) und hat sie keine Stimme, die ohne Internet arbeitet, kann sie auch die Ansagen über das Internet verarbeiten. Ihr Anbieter erfährt dann, welche Sehenswürdigkeiten mit welcher Richtung und Entfernung angesagt werden, und damit ungefähr, wo du gerade bist.</li>
+      <li>Unterwegs endet, wenn du es beendest, wenn du die Standortberechtigung entziehst oder den Standort ausschaltest. Eine Berechtigung für den Standort im Hintergrund braucht Unterwegs nicht, weil du es in der geöffneten App startest.</li>
     </ul>
 
     <h3>Standortbestimmung über die Google-Play-Dienste</h3>
@@ -68,14 +76,14 @@
     </ul>
 
     <h3>Vorlesen</h3>
-    <p>Texte liest die App mit der eingebauten Stimme „Thorsten“ vor. Sie läuft vollständig auf deinem Gerät: Die Sprache wird dort berechnet, dabei sendet die App nichts, weder an den Entwickler noch an Dritte. Die dafür genutzte Bibliothek ONNX Runtime von Microsoft enthält eine Funktion für Nutzungsstatistiken (Telemetrie); Genilo hat sie abgeschaltet.</p>
-    <p>Fehlt für einen Text die Aussprache, lässt sich Thorsten auf deinem Gerät nicht starten oder wählst du in den Einstellungen eine Stimme deines Geräts, liest die Sprachausgabe (Text-to-Speech) deines Android-Geräts vor. Genilo übergibt den Text dann an diese Sprachausgabe und sendet ihn nicht an den Entwickler. Genilo nimmt dafür die Sprachausgabe von Google, falls sie installiert ist, sonst die in den Android-Einstellungen eingestellte, und bevorzugt Stimmen, die ohne Internet arbeiten. Nur wenn es keine solche Stimme gibt, kann die Sprachausgabe den Text über das Internet verarbeiten; dann verarbeitet der Anbieter der Engine (zum Beispiel Google) den Text nach seinen eigenen Bedingungen.</p>
+    <p>Texte und die Ansagen von Unterwegs liest die App mit der eingebauten Stimme „Thorsten“ vor. Sie läuft vollständig auf deinem Gerät: Die Sprache wird dort berechnet, dabei sendet die App nichts, weder an den Entwickler noch an Dritte. Die dafür genutzte Bibliothek ONNX Runtime von Microsoft enthält eine Funktion für Nutzungsstatistiken (Telemetrie); Genilo hat sie abgeschaltet.</p>
+    <p>Fehlt für einen Text die Aussprache, lässt sich Thorsten auf deinem Gerät nicht starten oder wählst du in den Einstellungen eine Stimme deines Geräts, liest die Sprachausgabe (Text-to-Speech) deines Android-Geräts vor. Genilo übergibt den Text dann an diese Sprachausgabe und sendet ihn nicht an den Entwickler. Genilo nimmt dafür die Sprachausgabe von Google, falls sie installiert ist, sonst die in den Android-Einstellungen eingestellte, und bevorzugt Stimmen, die ohne Internet arbeiten. Nur wenn es keine solche Stimme gibt, kann die Sprachausgabe den Text über das Internet verarbeiten; dann verarbeitet der Anbieter der Engine (zum Beispiel Google) den Text nach seinen eigenen Bedingungen. Das gilt auch für die Ansagen von Unterwegs.</p>
 
     <h3>Links zu anderen Websites</h3>
     <p>Die Texte stammen aus der Wikipedia. Wenn du „In Wikipedia öffnen“ oder einen anderen Link antippst, öffnet sich die Seite in deinem Browser. Dann gelten die Datenschutzbestimmungen der jeweiligen Website, für Wikipedia die der Wikimedia Foundation (<a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>).</p>
 
     <h3>Berechtigungen</h3>
-    <p>Die App verlangt nur diese Berechtigungen: <strong>Standort</strong> (genau oder ungefähr, nur während der Nutzung; für die Ortsbestimmung), <strong>Internet</strong> (nur für die Karte) sowie <strong>Netzwerk- und WLAN-Status</strong> (die Kartenbibliothek prüft damit, ob eine Verbindung besteht). Eine Berechtigung für den Standort im Hintergrund hat die App nicht.</p>
+    <p>Die App verlangt nur diese Berechtigungen: <strong>Standort</strong> (genau oder ungefähr, nur während der Nutzung; für die Ortsbestimmung, Unterwegs braucht den genauen), <strong>Internet</strong> (nur für die Karte), <strong>Netzwerk- und WLAN-Status</strong> (die Kartenbibliothek prüft damit, ob eine Verbindung besteht), <strong>Vordergrunddienst für den Standort</strong> (damit Unterwegs bei ausgeschaltetem Bildschirm weiterläuft), <strong>Benachrichtigungen</strong> (für die Anzeige, dass Unterwegs läuft; freiwillig) und <strong>Gerät aktiv halten</strong> (damit eine Ansage bei ausgeschaltetem Bildschirm nicht stockt). Eine Berechtigung für den Standort im Hintergrund hat die App nicht.</p>
 
     <h3>Google Play</h3>
     <p>Wenn du die App über Google Play herunterlädst, verarbeitet Google dabei Daten nach seinen eigenen Datenschutzbestimmungen (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>). Darauf hat der Entwickler keinen Einfluss und erhält daraus keine Daten über dich persönlich.</p>
@@ -90,7 +98,7 @@
     <p>Du hast das Recht auf Auskunft (Art. 15 DSGVO), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18) und Datenübertragbarkeit (Art. 20). Gegen Verarbeitungen auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO kannst du Widerspruch einlegen (Art. 21); bei der Karte genügt es praktisch, den Bereich „In der Nähe“ nicht zu öffnen. Du hast außerdem das Recht, dich bei einer Datenschutz-Aufsichtsbehörde zu beschweren (Art. 77), z. B. bei der Behörde deines Bundeslandes. Da beim Entwickler keine Daten über dich gespeichert sind, wende dich für Daten bei OpenFreeMap oder Google am einfachsten direkt an diese Anbieter (siehe deren Datenschutzerklärungen). Für Fragen erreichst du mich unter der oben genannten E-Mail-Adresse.</p>
 
     <h3>Änderungen</h3>
-    <p>Sollte eine spätere Version der App weitere Daten verarbeiten, etwa für einen Fahrmodus mit automatischen Ansagen, wird diese Seite vorher aktualisiert.</p>
+    <p>Sollte eine spätere Version der App weitere Daten verarbeiten, wird diese Seite vorher aktualisiert.</p>
   </section>
 
   <hr>
@@ -114,9 +122,17 @@
     <ul>
       <li>When you tap “Use location” and grant the Android permission, the app uses your location, directly on the device, to determine your municipality, district, region and natural region and which sights are nearby.</li>
       <li>In the Android dialog you decide whether the app gets your precise or only your approximate location. With the approximate location, the result near municipal borders may be inaccurate.</li>
-      <li>The app requests your location only while you have it open, never in the background. It keeps it in memory only and does not send it to the developer.</li>
+      <li>The app requests your location only while you have it open or “Unterwegs” (On the go) is running (see below). It keeps it in memory only and does not send it to the developer.</li>
       <li>Without the location permission you can still use the app and choose a place manually.</li>
       <li>Accessing your device's location is strictly necessary for the locating feature you request (Section 25(2) no. 2 TDDDG). Legal basis for the processing: Art. 6(1)(b) GDPR (providing the app feature you use). You can revoke the permission at any time in the Android settings.</li>
+    </ul>
+
+    <h3>Unterwegs (On the go)</h3>
+    <ul>
+      <li>In the “Unterwegs” section the app announces sights you are passing. You start it yourself with “Unterwegs starten”.</li>
+      <li>While Unterwegs is running, the app uses your precise location continuously, about every three seconds, also with the screen off or while you use another app. Android shows an ongoing notification “Genilo Unterwegs”, from which you can stop Unterwegs at any time. If you do not allow notifications (Android 13 and later), Unterwegs still runs and Android lists it among the active apps.</li>
+      <li>Here too, the app evaluates your location only on your device; Unterwegs shows no map and makes no internet connection itself. The app keeps the location, the announcements and the list of announced sights in memory only; it stores none of it permanently and sends nothing to the developer. If your device's text-to-speech reads instead of “Thorsten” (see “Reading aloud”) and has no voice that works without internet, it may process the announcements over the internet as well. Its provider then learns which sights are announced with which direction and distance, and so roughly where you are.</li>
+      <li>Unterwegs ends when you stop it, revoke the location permission or switch off location. It needs no background location permission because you start it in the open app.</li>
     </ul>
 
     <h3>Locating via Google Play services</h3>
@@ -138,14 +154,14 @@
     </ul>
 
     <h3>Reading aloud</h3>
-    <p>The app reads texts aloud with its built-in voice “Thorsten”. It runs entirely on your device: the speech is computed there, and the app sends nothing, neither to the developer nor to third parties. The library it uses, Microsoft's ONNX Runtime, includes a usage statistics (telemetry) feature; Genilo has switched it off.</p>
-    <p>If a text has no pronunciation data, if Thorsten cannot start on your device, or if you choose one of your device's voices in the settings, your Android device's text-to-speech reads it aloud. Genilo then passes the text to that engine and does not send it to the developer. Genilo uses Google's text-to-speech if it is installed, otherwise the engine set in the Android settings, and prefers voices that work without internet. Only if there is no such voice may the engine process the text over the internet; the engine's provider (for example Google) then processes it under its own terms.</p>
+    <p>The app reads texts and the announcements of Unterwegs aloud with its built-in voice “Thorsten”. It runs entirely on your device: the speech is computed there, and the app sends nothing, neither to the developer nor to third parties. The library it uses, Microsoft's ONNX Runtime, includes a usage statistics (telemetry) feature; Genilo has switched it off.</p>
+    <p>If a text has no pronunciation data, if Thorsten cannot start on your device, or if you choose one of your device's voices in the settings, your Android device's text-to-speech reads it aloud. Genilo then passes the text to that engine and does not send it to the developer. Genilo uses Google's text-to-speech if it is installed, otherwise the engine set in the Android settings, and prefers voices that work without internet. Only if there is no such voice may the engine process the text over the internet; the engine's provider (for example Google) then processes it under its own terms. This also applies to the announcements of Unterwegs.</p>
 
     <h3>Links to other websites</h3>
     <p>The texts come from Wikipedia. When you tap “Open in Wikipedia” or another link, the page opens in your browser. The privacy policy of that website then applies, for Wikipedia that of the Wikimedia Foundation (<a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>).</p>
 
     <h3>Permissions</h3>
-    <p>The app requests only these permissions: <strong>location</strong> (precise or approximate, only while in use; for locating you), <strong>internet</strong> (only for the map) and <strong>network and Wi-Fi state</strong> (the map library uses it to check for a connection). The app has no background location permission.</p>
+    <p>The app requests only these permissions: <strong>location</strong> (precise or approximate, only while in use; for locating you, Unterwegs needs the precise one), <strong>internet</strong> (only for the map), <strong>network and Wi-Fi state</strong> (the map library uses it to check for a connection), <strong>foreground service for location</strong> (so Unterwegs keeps running with the screen off), <strong>notifications</strong> (to show that Unterwegs is running; optional) and <strong>keep device awake</strong> (so an announcement does not stall with the screen off). The app has no background location permission.</p>
 
     <h3>Google Play</h3>
     <p>When you download the app from Google Play, Google processes data under its own privacy policy (<a href="https://policies.google.com/privacy">policies.google.com/privacy</a>). The developer has no influence on this and receives no personal data about you from it.</p>
@@ -160,7 +176,7 @@
     <p>You have the right of access (Art. 15 GDPR), rectification (Art. 16), erasure (Art. 17), restriction of processing (Art. 18) and data portability (Art. 20). You can object to processing based on Art. 6(1)(f) GDPR (Art. 21); for the map, it is enough in practice not to open the “Nearby” section. You also have the right to lodge a complaint with a data protection supervisory authority (Art. 77). As the developer stores no data about you, the easiest way to exercise these rights for data held by OpenFreeMap or Google is directly with these providers (see their privacy policies). For questions, contact me at the email address above.</p>
 
     <h3>Changes</h3>
-    <p>Should a later version of the app process further data, for example for a driving mode with automatic announcements, this page will be updated first.</p>
+    <p>Should a later version of the app process further data, this page will be updated first.</p>
   </section>
 </main>
 </body>
