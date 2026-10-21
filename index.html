@@ -37,7 +37,7 @@
       <li>Die App sendet keine Daten an den Entwickler. Es gibt keinen eigenen Server des Entwicklers.</li>
       <li>Es gibt keine Werbung, keine Analyse- oder Tracking-Dienste, keine Nutzerkonten und keine Absturzberichte an Dritte.</li>
       <li>Die Daten zu Gemeinden, Kreisen, Bundesländern und Regionen, Naturräumen und Sehenswürdigkeiten sind in der App enthalten. Die Ortsbestimmung läuft deshalb ohne Internet auf deinem Gerät.</li>
-      <li>Auf deinem Gerät speichert die App nur diese mitgelieferte Datenbank, eine technische Angabe zur installierten Datenversion, ob du den Standort-Hinweis bereits bestätigt hast, und einen Zwischenspeicher (Cache) für Kartendaten der Gegenden, die du dir angesehen hast. Deinen Standort speichert sie nicht dauerhaft. Diese Daten verlassen das Gerät nicht; auch eine Cloud-Sicherung der App-Daten ist abgeschaltet. Die Speicherung auf deinem Gerät ist für die Funktion der App unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Sie bleibt bestehen, bis du die App-Daten löschst oder die App deinstallierst.</li>
+      <li>Auf deinem Gerät speichert die App nur diese mitgelieferte Datenbank, eine technische Angabe zur installierten Datenversion, ob du den Standort-Hinweis bereits bestätigt hast, welche Stimme du zum Vorlesen gewählt hast, und einen Zwischenspeicher (Cache) für Kartendaten der Gegenden, die du dir angesehen hast. Deinen Standort speichert sie nicht dauerhaft. Diese Daten verlassen das Gerät nicht; auch eine Cloud-Sicherung der App-Daten ist abgeschaltet. Die Speicherung auf deinem Gerät ist für die Funktion der App unbedingt erforderlich (§ 25 Abs. 2 Nr. 2 TDDDG). Sie bleibt bestehen, bis du die App-Daten löschst oder die App deinstallierst.</li>
     </ul>
 
     <h3>Standort</h3>
@@ -68,7 +68,8 @@
     </ul>
 
     <h3>Vorlesen</h3>
-    <p>Texte liest die App mit der Sprachausgabe (Text-to-Speech) deines Android-Geräts vor. Genilo übergibt den Text an die auf deinem Gerät eingestellte Sprachausgabe und sendet ihn nicht an den Entwickler. Ob die Sprachausgabe nur auf dem Gerät arbeitet oder den Text über das Internet verarbeitet, hängt von der gewählten Engine und Stimme ab. Im zweiten Fall verarbeitet der Anbieter der Engine (zum Beispiel Google) den Text nach seinen eigenen Bedingungen. Engine und Stimme legst du in den Android-Einstellungen unter Sprachausgabe fest.</p>
+    <p>Texte liest die App mit der eingebauten Stimme „Thorsten“ vor. Sie läuft vollständig auf deinem Gerät: Die Sprache wird dort berechnet, dabei sendet die App nichts, weder an den Entwickler noch an Dritte. Die dafür genutzte Bibliothek ONNX Runtime von Microsoft enthält eine Funktion für Nutzungsstatistiken (Telemetrie); Genilo hat sie abgeschaltet.</p>
+    <p>Fehlt für einen Text die Aussprache, lässt sich Thorsten auf deinem Gerät nicht starten oder wählst du in den Einstellungen eine Stimme deines Geräts, liest die Sprachausgabe (Text-to-Speech) deines Android-Geräts vor. Genilo übergibt den Text dann an diese Sprachausgabe und sendet ihn nicht an den Entwickler. Genilo nimmt dafür die Sprachausgabe von Google, falls sie installiert ist, sonst die in den Android-Einstellungen eingestellte, und bevorzugt Stimmen, die ohne Internet arbeiten. Nur wenn es keine solche Stimme gibt, kann die Sprachausgabe den Text über das Internet verarbeiten; dann verarbeitet der Anbieter der Engine (zum Beispiel Google) den Text nach seinen eigenen Bedingungen.</p>
 
     <h3>Links zu anderen Websites</h3>
     <p>Die Texte stammen aus der Wikipedia. Wenn du „In Wikipedia öffnen“ oder einen anderen Link antippst, öffnet sich die Seite in deinem Browser. Dann gelten die Datenschutzbestimmungen der jeweiligen Website, für Wikipedia die der Wikimedia Foundation (<a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>).</p>
@@ -106,7 +107,7 @@
       <li>The app sends no data to the developer. The developer runs no server of their own.</li>
       <li>There are no ads, no analytics or tracking services, no user accounts and no crash reports to third parties.</li>
       <li>The data on municipalities, districts, states and regions, natural regions and sights is included in the app. Locating you therefore works offline on your device.</li>
-      <li>On your device, the app stores only this bundled database, a technical note on the installed data version, whether you have already confirmed the location notice, and a cache of map data for the areas you have viewed. It does not store your location permanently. This data never leaves the device; cloud backup of the app's data is switched off as well. Storing it on your device is strictly necessary for the app to work (Section 25(2) no. 2 TDDDG). It is kept until you clear the app's data or uninstall the app.</li>
+      <li>On your device, the app stores only this bundled database, a technical note on the installed data version, whether you have already confirmed the location notice, which voice you chose for reading aloud, and a cache of map data for the areas you have viewed. It does not store your location permanently. This data never leaves the device; cloud backup of the app's data is switched off as well. Storing it on your device is strictly necessary for the app to work (Section 25(2) no. 2 TDDDG). It is kept until you clear the app's data or uninstall the app.</li>
     </ul>
 
     <h3>Location</h3>
@@ -137,7 +138,8 @@
     </ul>
 
     <h3>Reading aloud</h3>
-    <p>The app reads texts aloud using your Android device's text-to-speech. Genilo passes the text to the text-to-speech engine set on your device and does not send it to the developer. Whether the engine works only on the device or processes the text over the internet depends on the engine and voice you selected. In the latter case, the engine's provider (for example Google) processes the text under its own terms. You choose engine and voice in the Android settings under text-to-speech.</p>
+    <p>The app reads texts aloud with its built-in voice “Thorsten”. It runs entirely on your device: the speech is computed there, and the app sends nothing, neither to the developer nor to third parties. The library it uses, Microsoft's ONNX Runtime, includes a usage statistics (telemetry) feature; Genilo has switched it off.</p>
+    <p>If a text has no pronunciation data, if Thorsten cannot start on your device, or if you choose one of your device's voices in the settings, your Android device's text-to-speech reads it aloud. Genilo then passes the text to that engine and does not send it to the developer. Genilo uses Google's text-to-speech if it is installed, otherwise the engine set in the Android settings, and prefers voices that work without internet. Only if there is no such voice may the engine process the text over the internet; the engine's provider (for example Google) then processes it under its own terms.</p>
 
     <h3>Links to other websites</h3>
     <p>The texts come from Wikipedia. When you tap “Open in Wikipedia” or another link, the page opens in your browser. The privacy policy of that website then applies, for Wikipedia that of the Wikimedia Foundation (<a href="https://foundation.wikimedia.org/wiki/Policy:Privacy_policy">foundation.wikimedia.org/wiki/Policy:Privacy_policy</a>).</p>
